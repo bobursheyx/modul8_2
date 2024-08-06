@@ -1,9 +1,5 @@
-from rest_framework import status
-from django.http import JsonResponse
-from rest_framework.generics import get_object_or_404
-from rest_framework.views import APIView
-from rest_framework.permissions import AllowAny
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from root.permissions import AllowAny
+from root.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from products.models import Category
 from products.serializers import CategorySerializer
 
@@ -31,8 +27,8 @@ class CategoryDetailPage(RetrieveUpdateDestroyAPIView):
 #              'updated_at': category.updated_at} for category in Category.objects.all()]
 #
 #         return JsonResponse(data=categories, safe=False, status=status.HTTP_200_OK)
-
-
+#
+#
 # class CategoryDetailPage(APIView):
 #     permission_classes = (AllowAny,)
 #

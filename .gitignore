@@ -107,8 +107,8 @@ venv.bak/
 
 # extras
 media/
-products/migrations/*
-!products/migrations/__init__.py
+../products/migrations/*
+!../products/migrations/__init__.py
 !templates/
 
 # Spyder project settings
